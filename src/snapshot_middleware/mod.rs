@@ -92,6 +92,8 @@ pub fn snapshot_from_vfs(
             return snapshot_csv(context, vfs, path, name);
         } else if let Some(name) = match_file_name(path, ".txt") {
             return snapshot_txt(context, vfs, path, name);
+         else if let Some(name) = match_file_name(path, ".md") {
+            return snapshot_txt(context, vfs, path, name);
         } else if let Some(name) = match_file_name(path, ".rbxmx") {
             return snapshot_rbxmx(context, vfs, path, name);
         } else if let Some(name) = match_file_name(path, ".rbxm") {
